@@ -11,8 +11,8 @@ const signUpFailure = error => {
 }
 
 const signInSuccess = response => {
-  console.log('SUCCESS! The response body is: ', response)
   store.user = response.user
+  console.log('The stored user data is: ', store)
   $('#unauthorized').hide()
   $('#authorized').show()
   $('.navbar').toggleClass('d-none')
@@ -33,11 +33,21 @@ const signOutFailure = error => {
   console.log(error)
 }
 
+const changePwSuccess = response => {
+  console.log('Password Changed!')
+}
+
+const changePwFailure = error => {
+  console.log(error)
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
   signInSuccess,
   signInFailure,
   signOutSuccess,
-  signOutFailure
+  signOutFailure,
+  changePwSuccess,
+  changePwFailure
 }

@@ -14,6 +14,7 @@ $(() => {
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#sign-in').on('submit', authEvents.onSignIn)
   $('#sign-out').on('click', authEvents.onSignOut)
+  $('#change-pw').on('submit', authEvents.onChangePw)
   // Dog Listeners
   $('#index-dogs').on('click', dogEvents.onIndexDogs)
 })
