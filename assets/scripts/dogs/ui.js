@@ -4,7 +4,7 @@ const showDogsTemplate = require('../templates/dog-listing.handlebars')
 const showDogTemplate = require('../templates/show-dog.handlebars')
 
 const indexDogsSuccess = response => {
-  console.log('SUCCESS!', response)
+  $('.content').empty()
   const dogListHtml = showDogsTemplate({ dogs: response.dogs })
   $('.content').append(dogListHtml)
 }
@@ -12,11 +12,12 @@ const indexDogsSuccess = response => {
 const indexDogsFailure = error => {
   console.log(error)
   $('form').trigger('reset')
-  $('.content').append('<h3>No dogs found :(</h3>')
+  $('.content').empty()
 }
 
 const showDogSuccess = response => {
   $('form').trigger('reset')
+  $('.content').empty()
   const dogHtml = showDogTemplate({ dog: response.dog })
   $('.content').append(dogHtml)
 }

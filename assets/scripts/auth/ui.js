@@ -29,6 +29,7 @@ const signOutSuccess = response => {
   $('#authorized').hide()
   $('#unauthorized').show()
   $('.navbar').toggleClass('d-none')
+  $('.content').empty()
 }
 
 const signOutFailure = error => {
