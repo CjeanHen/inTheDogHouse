@@ -3,22 +3,24 @@
 const store = require('../store')
 
 const signUpSuccess = response => {
-  console.log('SUCCESS! The response body is: ', response)
+  $('form').trigger('reset')
 }
 
 const signUpFailure = error => {
   console.log(error)
+  $('form').trigger('reset')
 }
 
 const signInSuccess = response => {
   store.user = response.user
-  console.log('The stored user data is: ', store)
+  $('form').trigger('reset')
   $('#unauthorized').hide()
   $('#authorized').show()
   $('.navbar').toggleClass('d-none')
 }
 
 const signInFailure = error => {
+  $('form').trigger('reset')
   console.log(error)
 }
 
@@ -34,10 +36,12 @@ const signOutFailure = error => {
 }
 
 const changePwSuccess = response => {
+  $('form').trigger('reset')
   console.log('Password Changed!')
 }
 
 const changePwFailure = error => {
+  $('form').trigger('reset')
   console.log(error)
 }
 

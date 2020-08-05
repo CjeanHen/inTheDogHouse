@@ -17,4 +17,5 @@ $(() => {
   $('#change-pw').on('submit', authEvents.onChangePw)
   // Dog Listeners
   $('#index-dogs').on('click', dogEvents.onIndexDogs)
+  $('#show-dog').on('submit', dogEvents.onShowDog)
 })

@@ -13,6 +13,17 @@ const indexDogs = () => {
   })
 }
 
+const showDog = data => {
+  return $.ajax({
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
+    url: config.apiUrl + '/dogs/' + data.id,
+    method: 'GET'
+  })
+}
+
 module.exports = {
-  indexDogs
+  indexDogs,
+  showDog
 }
