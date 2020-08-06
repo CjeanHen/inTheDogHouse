@@ -26,9 +26,46 @@ const showDogFailure = error => {
   console.log(error)
 }
 
+const createDogSuccess = response => {
+  console.log(response)
+  $('form').trigger('reset')
+  $('.content').empty()
+  $('.content').append('<p>Added to the list!</p>')
+}
+
+const createDogFailure = error => {
+  console.log(error)
+}
+
+const updateDogSuccess = response => {
+  $('form').trigger('reset')
+  $('.content').empty()
+  $('.content').append('<p> Updated!</p>')
+}
+
+const updateDogFailure = error => {
+  console.log(error)
+}
+
+const deleteDogSuccess = response => {
+  $('form').trigger('reset')
+  $('.content').empty()
+  $('.content').append('<p>Congratulations on your new home!</p>')
+}
+
+const deleteDogFailure = error => {
+  console.log(error)
+}
+
 module.exports = {
   indexDogsSuccess,
   indexDogsFailure,
   showDogSuccess,
-  showDogFailure
+  showDogFailure,
+  createDogSuccess,
+  createDogFailure,
+  updateDogSuccess,
+  updateDogFailure,
+  deleteDogSuccess,
+  deleteDogFailure
 }

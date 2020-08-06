@@ -1,4 +1,19 @@
 @import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  @include make-container;
+
+  section {
+    @include make-col(4);
+    border: 1px solid;
+  }
+}
+
+.content {
+  @include make-row;
+}
 
 #authorized {
   display: none;

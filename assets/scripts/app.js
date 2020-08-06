@@ -18,4 +18,7 @@ $(() => {
   // Dog Listeners
   $('#index-dogs').on('click', dogEvents.onIndexDogs)
   $('#show-dog').on('submit', dogEvents.onShowDog)
+  $('#create-dog').on('submit', dogEvents.onCreateDog)
+  $('#update-dog').on('submit', dogEvents.onUpdateDog)
+  $('#delete-dog').on('submit', dogEvents.onDeleteDog)
 })

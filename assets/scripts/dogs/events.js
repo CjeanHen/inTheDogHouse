@@ -23,7 +23,43 @@ const onShowDog = event => {
     .catch(ui.showDogFailure)
 }
 
+const onCreateDog = event => {
+  event.preventDefault()
+
+  const form = event.target
+  const data = getFormFields(form)
+
+  api.createDog(data)
+    .then(ui.createDogSuccess)
+    .catch(ui.createDogFailure)
+}
+
+const onUpdateDog = event => {
+  event.preventDefault()
+
+  const form = event.target
+  const data = getFormFields(form)
+
+  api.updateDog(data)
+    .then(ui.updateDogSuccess)
+    .catch(ui.updateDogFailure)
+}
+
+const onDeleteDog = event => {
+  event.preventDefault()
+
+  const form = event.target
+  const data = getFormFields(form)
+
+  api.deleteDog(data)
+    .then(ui.deleteDogSuccess)
+    .catch(ui.deleteDogFailure)
+}
+
 module.exports = {
   onIndexDogs,
-  onShowDog
+  onShowDog,
+  onCreateDog,
+  onUpdateDog,
+  onDeleteDog
 }
