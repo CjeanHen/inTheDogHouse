@@ -8,6 +8,8 @@ body {
   section {
     @include make-col(4);
     border: 1px solid;
+    margin: 1px;
+    border-radius: 5px
   }
 }
 
@@ -20,6 +22,5 @@ body {
 }
 
 #unauthorized {
-  border: 1px solid #D3D3D3;
-  border-radius: 5px;
+
 }
