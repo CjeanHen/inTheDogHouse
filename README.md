@@ -4,7 +4,7 @@ This application is made to store data about dogs in a shelter. I was inspired t
 ## Important Links
 API Repo: https://github.com/CjeanHen/bow-wow-api
 Deployed API: https://young-crag-09807.herokuapp.com/
-Deployed Client:
+Deployed Client: https://cjeanhen.github.io/inTheDogHouse/
 ### Planning Story
 The first step to creating the front-end was just to focus on creating the inputs and buttons necessary for the user to sign up and sign in. This was very familiar since it was the same process I followed with the previous project, so this time I made the sign up form a modal. After that I began with the authorized user routes which were the change password and sign out buttons. The dog forms were even more of the same, but I had trouble with the create routes because of how I was naming the inputs in the HTML. Most of my work after that was styling since I didn't want to have the page just a list of forms. I tried to add a bit of content to make it look more like a shelter page. Styling is not my strong point.
 
@@ -25,4 +25,5 @@ As a user I don't want updates to be made by anyone who is not a registered user
 ### Unsolved Problems
 I would like to improve on my knowledge of UI and UX. It is very difficult for me to visualize a website, but I can easily follow requirements.
 
-## Wireframe:
+## Wireframe
+[Wireframe](https://photos.app.goo.gl/Nf8XyRrbkeHJ4UD77)
