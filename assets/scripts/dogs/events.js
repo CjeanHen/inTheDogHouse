@@ -17,7 +17,6 @@ const onShowDog = event => {
 
   const form = event.target
   const data = getFormFields(form)
-  console.log(data)
   api.showDog(data)
     .then(ui.showDogSuccess)
     .catch(ui.showDogFailure)

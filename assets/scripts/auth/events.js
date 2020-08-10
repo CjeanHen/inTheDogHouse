@@ -39,7 +39,6 @@ const onChangePw = event => {
 
   const form = event.target
   const data = getFormFields(form)
-  console.log(data)
   api.changePw(data)
     .then(ui.changePwSuccess)
     .catch(ui.changePwFailure)
