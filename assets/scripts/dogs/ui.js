@@ -10,10 +10,11 @@ const indexDogsSuccess = response => {
   $('#dogs').append(dogListHtml)
 }
 
-const indexDogsFailure = error => {
-  console.log(error)
+const indexDogsFailure = response => {
   $('form').trigger('reset')
-  $('.content').empty()
+  $('#dogs').empty()
+  $('#results').modal('show')
+  $('#dogs').append('<p>No dogs in the house!</p>')
 }
 
 const showDogSuccess = response => {
@@ -24,20 +25,24 @@ const showDogSuccess = response => {
   $('#dogs').append(dogHtml)
 }
 
-const showDogFailure = error => {
-  console.log(error)
+const showDogFailure = response => {
+  $('#dogs').empty()
+  $('#results').modal('show')
+  $('#dogs').append('<p>No dogs in the house!</p>')
 }
 
 const createDogSuccess = response => {
-  console.log(response)
   $('form').trigger('reset')
   $('#dogs').empty()
   $('#results').modal('show')
   $('#dogs').append('<p>Added to the list!</p>')
 }
 
-const createDogFailure = error => {
-  console.log(error)
+const createDogFailure = response => {
+  $('form').trigger('reset')
+  $('#dogs').empty()
+  $('#results').modal('show')
+  $('#dogs').append('<p>There has been a mistake...please try again!</p>')
 }
 
 const updateDogSuccess = response => {
@@ -46,8 +51,11 @@ const updateDogSuccess = response => {
   $('.content').append('<p> Updated!</p>')
 }
 
-const updateDogFailure = error => {
-  console.log(error)
+const updateDogFailure = response => {
+  $('form').trigger('reset')
+  $('#dogs').empty()
+  $('#results').modal('show')
+  $('#dogs').append('<p>There has been a mistake...please try again!</p>')
 }
 
 const deleteDogSuccess = response => {
@@ -57,8 +65,11 @@ const deleteDogSuccess = response => {
   $('#dogs').append('<p>Congratulations on your new best friend!</p>')
 }
 
-const deleteDogFailure = error => {
-  console.log(error)
+const deleteDogFailure = response => {
+  $('form').trigger('reset')
+  $('#dogs').empty()
+  $('#results').modal('show')
+  $('#dogs').append('<p>There has been a mistake...please try again!</p>')
 }
 
 module.exports = {

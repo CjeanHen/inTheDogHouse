@@ -6,8 +6,7 @@ const signUpSuccess = response => {
   $('form').trigger('reset')
 }
 
-const signUpFailure = error => {
-  console.log(error)
+const signUpFailure = response => {
   $('form').trigger('reset')
 }
 
@@ -19,31 +18,36 @@ const signInSuccess = response => {
   $('.navbar').toggleClass('d-none')
 }
 
-const signInFailure = error => {
+const signInFailure = response => {
   $('form').trigger('reset')
-  console.log(error)
 }
 
 const signOutSuccess = response => {
-  console.log('Sign out success')
   $('#authorized').hide()
   $('#unauthorized').show()
   $('.navbar').toggleClass('d-none')
   $('.content').empty()
 }
 
-const signOutFailure = error => {
-  console.log(error)
+const signOutFailure = response => {
+  $('form').trigger('reset')
+  $('#dogs').empty()
+  $('#results').modal('show')
+  $('#dogs').append('<p>There has been a mistake...please try again!</p>')
 }
 
 const changePwSuccess = response => {
   $('form').trigger('reset')
-  console.log('Password Changed!')
+  $('#dogs').empty()
+  $('#results').modal('show')
+  $('#dogs').append('<p>Password changed!</p>')
 }
 
-const changePwFailure = error => {
+const changePwFailure = response => {
   $('form').trigger('reset')
-  console.log(error)
+  $('#dogs').empty()
+  $('#results').modal('show')
+  $('#dogs').append('<p>Your password was not changed</p>')
 }
 
 module.exports = {
