@@ -1,26 +1,30 @@
 {{#each dogs as |dog|}}
   {{log dog}}
   <section data-id="{{dog.id}}">
-    <h6>Name:</h6>
-    <h3>
-      {{dog.name}}
-    </h3>
-    <h6>Breed:</h6>
-    <h3>
-      {{dog.breed}}
-    </h3>
-    <h6>Age:</h6>
-    <h3>
-      {{dog.age}}
-    </h3>
-    <h6>Tricks:</h6>
-    <p>
-      {{#if dog.tricks}}
-        {{dog.tricks}}
-      {{else}}
-        {{dog.name}} doesn't know any tricks yet!
-      {{/if}}
-    </p>
+      <h6>Name:</h6>
+      <h3>
+        {{dog.name}}
+      </h3>
+      <h6>Breed:</h6>
+      <h3>
+        {{dog.breed}}
+      </h3>
+      <h6>Age:</h6>
+      <h3>
+        {{dog.age}}
+      </h3>
+      <h6>Shelter ID:</h6>
+      <p>
+        {{dog._id}}
+      </p>
+      <h6>Tricks:</h6>
+      <p>
+        {{#if dog.tricks}}
+          {{dog.tricks}}
+        {{else}}
+          {{dog.name}} doesn't know any tricks yet!
+        {{/if}}
+      </p>
   </section>
 
 {{/each}}

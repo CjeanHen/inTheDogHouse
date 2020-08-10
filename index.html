@@ -33,11 +33,7 @@
     </nav>
 
     <div id="unauthorized" class="container">
-    <div class="row">
-    <div class="col-6">
-      <img src="/assets/images/dog.png" alt="cartoon dog">
-    </div>
-    <div class="col-6">
+    <div class="col-md-6 col-sm-12">
       <div class="row d-flex justify-content-center">
         <div class="col-6 align-middle">
           <form id="sign-in">
@@ -97,7 +93,6 @@
             <a href="#" class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="#modalRegisterForm">Sign Up!</a>
           </div>
         </div>
-      </div>
     </div>
 
           <div class="container" id="authorized">
@@ -114,7 +109,7 @@
                   <div class="form-group">
                     <label class="mr-sm-2" for="id">Dog Id:</label>
                     <input class="form-control mr-sm-2" name="id" type="text" placeholder="Dog ID">
-                    <button class="btn btn-info" type="submit">Search</button>
+                      <button class="btn btn-info" type="submit">Search</button>
                   </div>
                   </form>
                 </div>
@@ -167,6 +162,24 @@
               </div>
 
             <div class="col-10 content"></div>
+            <div class="modal" id="results" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">The Dog House</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p id="dogs">These could be your next best friend</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
           </div>
         </div>
     </body>

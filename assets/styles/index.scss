@@ -6,15 +6,17 @@ body {
   @include make-container;
 
   section {
-    @include make-col(4);
+    @include make-col(5)
     border: 1px solid;
-    margin: 1px;
     border-radius: 5px;
+    margin: 1px;
+    padding: 2px;
   }
 }
 
-.content {
+#dogs {
   @include make-row;
+  justify-content: center;
 }
 
 #authorized {

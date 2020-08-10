@@ -4,9 +4,10 @@ const showDogsTemplate = require('../templates/dog-listing.handlebars')
 const showDogTemplate = require('../templates/show-dog.handlebars')
 
 const indexDogsSuccess = response => {
-  $('.content').empty()
   const dogListHtml = showDogsTemplate({ dogs: response.dogs })
-  $('.content').append(dogListHtml)
+  $('#dogs').empty()
+  $('#results').modal('show')
+  $('#dogs').append(dogListHtml)
 }
 
 const indexDogsFailure = error => {
@@ -17,9 +18,10 @@ const indexDogsFailure = error => {
 
 const showDogSuccess = response => {
   $('form').trigger('reset')
-  $('.content').empty()
   const dogHtml = showDogTemplate({ dog: response.dog })
-  $('.content').append(dogHtml)
+  $('#dogs').empty()
+  $('#results').modal('show')
+  $('#dogs').append(dogHtml)
 }
 
 const showDogFailure = error => {
@@ -29,8 +31,9 @@ const showDogFailure = error => {
 const createDogSuccess = response => {
   console.log(response)
   $('form').trigger('reset')
-  $('.content').empty()
-  $('.content').append('<p>Added to the list!</p>')
+  $('#dogs').empty()
+  $('#results').modal('show')
+  $('#dogs').append('<p>Added to the list!</p>')
 }
 
 const createDogFailure = error => {
@@ -49,8 +52,9 @@ const updateDogFailure = error => {
 
 const deleteDogSuccess = response => {
   $('form').trigger('reset')
-  $('.content').empty()
-  $('.content').append('<p>Congratulations on your new home!</p>')
+  $('#dogs').empty()
+  $('#results').modal('show')
+  $('#dogs').append('<p>Congratulations on your new best friend!</p>')
 }
 
 const deleteDogFailure = error => {
