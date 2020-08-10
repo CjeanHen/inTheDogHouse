@@ -4,10 +4,12 @@ const store = require('../store')
 
 const signUpSuccess = response => {
   $('form').trigger('reset')
+  $('#signUpHeader').text('Success!')
 }
 
 const signUpFailure = response => {
   $('form').trigger('reset')
+  $('#signUpHeader').text('Try again')
 }
 
 const signInSuccess = response => {
