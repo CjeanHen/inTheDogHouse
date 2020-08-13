@@ -12,13 +12,13 @@ body {
   }
 }
 
+#authorized {
+  display: none;
+}
+
 #dogs {
   @include make-row;
   justify-content: center;
-}
-
-#authorized {
-  display: none;
 }
 
 #signInFail {

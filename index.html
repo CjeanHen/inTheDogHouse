@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>BowWOW!</title>
+      <title>The Dog House</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -12,9 +12,14 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>The Dog House</h1>
+      <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1>In The Dog House</h1>
+        <p>Just because you're in it doesn't mean you can't leave it.</p>
+      </div>
+    </div>
 
-      <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-end d-none">
+      <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light d-none">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapseNav" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -33,12 +38,13 @@
     </nav>
 
     <div id="unauthorized" class="container">
-    <div id="signInFail">
-      <p>Please check your username or password. If you do not have an account, please sign up!</p>
-    </div>
-    <div class="col-md-6 col-sm-12">
+    <div class="col">
+
       <div class="row d-flex justify-content-center">
         <div class="col-6 align-middle">
+          <div id="signInFail" class="row justify-content-center">
+            <p>Please check your username or password. If you do not have an account, please sign up!</p>
+          </div>
           <form id="sign-in">
             <div class="form-group">
               <label for="email">Email:</label>
