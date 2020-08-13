@@ -7,8 +7,6 @@ body {
 
   section {
     @include make-col(5)
-    border: 1px solid;
-    border-radius: 5px;
     margin: 1px;
     padding: 2px;
   }
@@ -23,6 +21,7 @@ body {
   display: none;
 }
 
-#unauthorized {
-
+#signInFail {
+  display: none;
+  color: red;
 }

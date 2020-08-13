@@ -1,28 +1,27 @@
 {{#each dogs as |dog|}}
-  <section data-id="{{dog.id}}">
-      <h6>Name:</h6>
-      <h3>
-        {{dog.name}}
-      </h3>
-      <h6>Breed:</h6>
-      <h3>
+  <div class="card mt-3">
+    <div class="card-body">
+      <h2 class="card-title">{{dog.name}}</h2>
+      <h6 class="card-text">Breed:</h6>
+      <h4 class="card-text">
         {{dog.breed}}
-      </h3>
-      <h6>Age:</h6>
-      <h3>
+      </h4>
+      <h6 class="card-text">Age:</h6>
+      <h3 class="card-text">
         {{dog.age}}
       </h3>
-      <h6>Shelter ID:</h6>
-      <p>
+      <h6 class="card-text">Shelter ID:</h6>
+      <p class="card-text">
         {{dog._id}}
       </p>
-      <h6>Tricks:</h6>
-      <p>
+      <h6 class="card-text">Tricks:</h6>
+      <p class="card-text">
         {{#if dog.tricks}}
           {{dog.tricks}}
         {{else}}
           {{dog.name}} doesn't know any tricks yet!
         {{/if}}
       </p>
-  </section>
+    </div>
+  </div>
 {{/each}}

@@ -18,10 +18,12 @@ const signInSuccess = response => {
   $('#unauthorized').hide()
   $('#authorized').show()
   $('.navbar').toggleClass('d-none')
+  $('#signInFail').hide()
 }
 
 const signInFailure = response => {
   $('form').trigger('reset')
+  $('#signInFail').show()
 }
 
 const signOutSuccess = response => {

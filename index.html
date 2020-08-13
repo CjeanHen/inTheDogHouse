@@ -33,6 +33,9 @@
     </nav>
 
     <div id="unauthorized" class="container">
+    <div id="signInFail">
+      <p>Please check your username or password. If you do not have an account, please sign up!</p>
+    </div>
     <div class="col-md-6 col-sm-12">
       <div class="row d-flex justify-content-center">
         <div class="col-6 align-middle">
@@ -133,6 +136,7 @@
                 </div>
               <div class="col-6">
                 <h3>Update a current dog:</h3>
+                <p>Remember: Once a dog has been adopted their file cannot be updated. If they are returning to the shelter please complete the intake process again.</p>
                 <form id="update-dog">
                   <div class="form-group">
                     <label class="mr-sm-2" for="name">ID:</label>
@@ -151,6 +155,7 @@
                 <div class="col-6">
                   <h3>Found your new best friend?</h3>
                   <p>We're happy to hear it. This is a big moment for both of you, so please be patient as your new family member takes time to adjust to their new household.</p>
+                  <p>*Only the shelter associate responsible for intake can complete the adoption process.</p>
                   <form id="delete-dog">
                     <div class="form-group">
                       <label class="mr-sm-2" for="id">Dog Id:</label>
@@ -161,7 +166,7 @@
                   </div>
               </div>
 
-            <div class="col-10 content"></div>
+            <div class="content"></div>
             <div class="modal" id="results" tabindex="-1" role="dialog">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -171,8 +176,8 @@
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
-              <div class="modal-body">
-                <p id="dogs">These could be your next best friend</p>
+              <div class="modal-body" id="dogs">
+                <p>New best friends:</p>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
